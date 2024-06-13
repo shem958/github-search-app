@@ -36,7 +36,7 @@ const UserCard: React.FC<{ user: User | null }> = ({ user }) => {
   if (!user) {
     return (
       <div className="flex justify-center items-center h-screen">
-        <div className="p-8 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+        <div className="p-8 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-md">
           <div className="text-center text-gray-500">
             <FaSearch className="mx-auto text-4xl mb-4" />
             {showNotFound ? (
@@ -61,7 +61,7 @@ const UserCard: React.FC<{ user: User | null }> = ({ user }) => {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="p-8 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+      <div className="p-8 w-96 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-md">
         <div className="flex items-center space-x-6">
           <img
             className="h-24 w-24 rounded-full"
