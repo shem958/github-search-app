@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "/home/shem/github-search-app/src/styles.css";
-import { ThemeProvider } from "./ThemeContext";
-import App from "./App";
+import "./assets/styles.css";
+import { ThemeProvider } from "./context/ThemeContext";
+import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(

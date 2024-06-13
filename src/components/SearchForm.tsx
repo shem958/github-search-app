@@ -11,6 +11,7 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSearch }) => {
     event.preventDefault();
     onSearch(username);
   };
+
   return (
     <form
       onSubmit={handleSubmit}

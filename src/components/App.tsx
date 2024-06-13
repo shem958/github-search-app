@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchForm from "./SearchForm";
 import UserCard from "./UserCard";
-import { useTheme } from "./ThemeContext";
+import { useTheme } from "/home/shem/github-search-app/src/context/ThemeContext";
 
 interface User {
   avatar_url: string;
