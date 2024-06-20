@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import SearchForm from "./SearchForm";
 import UserCard from "./UserCard";
-import { useTheme } from "/home/shem/github-search-app/src/context/ThemeContext";
+import { useTheme } from "../context/ThemeContext";
 
 interface User {
   avatar_url: string;
@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const { darkMode, toggleDarkMode } = useTheme();
+  const { darkMode } = useTheme();
 
   const fetchUser = async (username: string) => {
     setLoading(true);
@@ -41,16 +41,10 @@ const App: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen flex flex-col items-center justify-center ${
+      className={`min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}
     >
-      <button
-        className="absolute top-4 right-4 p-2 bg-gray-300 dark:bg-gray-700 rounded-md"
-        onClick={toggleDarkMode}
-      >
-        {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
       <SearchForm onSearch={fetchUser} />
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-500">{error}</div>}
